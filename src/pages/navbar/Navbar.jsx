@@ -1,13 +1,13 @@
 import React from "react";
 import "../navbar/navbar.css";
 import Logo from "../../assets/photo-profil.webp";
-import data from "../../data";
+import data from "./data";
 import { IoColorPalette } from "react-icons/io5";
 
 const Navbar = () => {
   return (
     <nav id="navbar">
-      <div className="container nav_container">
+      <div className="container nav__container">
         <a href="index.html" className="nav__logo">
           <img src={Logo} alt="Profil" />
         </a>
