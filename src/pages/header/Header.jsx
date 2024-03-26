@@ -18,10 +18,10 @@ const Header = () => {
         </p>
         <div className="header__cta">
           <a href="#contact" className="btn primary">
-            Let's talk
+            Contact
           </a>
           <a href="#portfolio" className="btn light">
-            My work
+            Mes travaux
           </a>
         </div>
         <div className="header__socials">
@@ -29,7 +29,7 @@ const Header = () => {
             <a
               key={item.id}
               href={item.link}
-              target="blank"
+              target="_blank"
               rel="noopener noreferrer"
             >
               {item.icon}
