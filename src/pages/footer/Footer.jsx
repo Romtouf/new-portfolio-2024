@@ -10,7 +10,7 @@ const Footer = () => {
       <div className="container footer__container">
         <ul className="nav__menu">
           {links.map((fLink) => (
-            <li key={fLink.id}>
+            <li key={fLink.footerId}>
               <a href={fLink.link}>{fLink.title}</a>
             </li>
           ))}
@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="footer__socials">
           {socials.map((social) => (
             <a
-              key={social.id}
+              key={social.footerSocId}
               href={social.link}
               target="_blank"
               rel="noopener noreferrer"

@@ -25,6 +25,7 @@ const Carousel = () => {
     <div className="carousel">
       {logos.map((logo, index) => (
         <div
+          key={index}
           className="carousel__face"
           style={{ "--rotate": `${index * (360 / logos.length)}deg` }}
         >

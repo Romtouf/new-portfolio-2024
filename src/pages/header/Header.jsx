@@ -27,7 +27,7 @@ const Header = () => {
         <div className="header__socials">
           {data.map((item) => (
             <a
-              key={item.id}
+              key={item.headerId}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"

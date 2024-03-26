@@ -2,18 +2,22 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { AiOutlineGithub } from "react-icons/ai";
 
 export const links = [
-  { id: 1, link: "#", title: "Accueil" },
-  { id: 2, link: "#about", title: "À propos de moi" },
-  { id: 3, link: "#services", title: "Services" },
-  { id: 5, link: "#portfolio", title: "Portfolio" },
-  { id: 5, link: "#contact", title: "Contact" },
+  { footerId: 5, link: "#", title: "Accueil" },
+  { footerId: 6, link: "#about", title: "À propos de moi" },
+  { footerId: 7, link: "#services", title: "Services" },
+  { footerId: 8, link: "#portfolio", title: "Portfolio" },
+  { footerId: 9, link: "#contact", title: "Contact" },
 ];
 
 export const socials = [
   {
-    id: 1,
+    footerSocId: 10,
     link: "https://www.linkedin.com/in/rom22-devweb",
     icon: <RiLinkedinFill />,
   },
-  { id: 2, link: "https://github.com/Romtouf", icon: <AiOutlineGithub /> },
+  {
+    footerSocId: 11,
+    link: "https://github.com/Romtouf",
+    icon: <AiOutlineGithub />,
+  },
 ];

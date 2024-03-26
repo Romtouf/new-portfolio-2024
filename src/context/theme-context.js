@@ -1,5 +1,5 @@
 import { createContext, useContext, useReducer, useEffect } from "react";
-import { themeReducer } from "./themeReducer";
+import themeReducer from "./themeReducer";
 
 export const ThemeContext = createContext();
 
@@ -22,7 +22,7 @@ export const ThemeProvider = ({ children }) => {
   );
 };
 
-export default themeReducer;
+export default ThemeContext;
 
 // Custom hook to use theme context
 

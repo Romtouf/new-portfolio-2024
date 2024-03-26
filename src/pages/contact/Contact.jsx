@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="container contact__container">
         {contacts.map((contact) => (
           <a
-            key={contact.id}
+            key={contact.contactId}
             href={contact.link}
             target="_blank"
             rel="noopener noreferrer"

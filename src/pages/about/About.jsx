@@ -19,7 +19,7 @@ const About = () => {
           <h2>À propos de moi</h2>
           <div className="about__cards">
             {data.map((item) => (
-              <Card key={item.id} className="about__card">
+              <Card key={item.aboutId} className="about__card">
                 <span className="about__card-icon">{item.icon}</span>
                 <h5>{item.title}</h5>
                 <small>{item.desc}</small>

@@ -1,6 +1,6 @@
 const data = [
   {
-    id: 1,
+    portId: 19,
     category: "JavaScript",
     img: "assets/portfolio/portfolio1.jpg",
     title: "Project 1",
@@ -9,7 +9,7 @@ const data = [
     github: "#",
   },
   {
-    id: 2,
+    portId: 20,
     category: "React js",
     img: "assets/portfolio/portfolio1.jpg",
     test: "Project 2",
@@ -18,7 +18,7 @@ const data = [
     github: "#",
   },
   {
-    id: 3,
+    portId: 21,
     category: "IA",
     img: "assets/portfolio/portfolio1.jpg",
     title: "Project 3",
@@ -27,7 +27,7 @@ const data = [
     github: "#",
   },
   {
-    id: 4,
+    portId: 22,
     category: "Redux",
     img: "assets/portfolio/portfolio1.jpg",
     title: "Project 4",
@@ -36,7 +36,7 @@ const data = [
     github: "#",
   },
   {
-    id: 5,
+    portId: 23,
     category: "Gestion de projet",
     img: "assets/portfolio/portfolio1.jpg",
     title: "Project 5",
@@ -45,7 +45,7 @@ const data = [
     github: "#",
   },
   {
-    id: 6,
+    portId: 24,
     category: "React js",
     img: "assets/portfolio/portfolio1.jpg",
     title: "Project 6",

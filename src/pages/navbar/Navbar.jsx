@@ -15,7 +15,7 @@ const Navbar = () => {
         </a>
         <ul className="nav__menu">
           {data.map((item) => (
-            <li key={item.id}>
+            <li key={item.navbarId}>
               <a href={item.link}>{item.title}</a>
             </li>
           ))}

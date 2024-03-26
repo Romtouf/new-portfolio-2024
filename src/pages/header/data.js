@@ -3,11 +3,15 @@ import { AiOutlineGithub } from "react-icons/ai";
 
 const data = [
   {
-    id: 1,
+    headerId: 12,
     link: "https://www.linkedin.com/in/rom22-devweb",
     icon: <RiLinkedinFill />,
   },
-  { id: 2, link: "https://github.com/Romtouf", icon: <AiOutlineGithub /> },
+  {
+    headerId: 13,
+    link: "https://github.com/Romtouf",
+    icon: <AiOutlineGithub />,
+  },
 ];
 
 export default data;

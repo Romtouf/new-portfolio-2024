@@ -16,7 +16,6 @@ const Theme = () => {
       <div className="theme__primary-wrapper">
         <h5>Couleur principale</h5>
         <div className="theme__primary-colors">
-          {" "}
           {primaryColors.map((pColor) => (
             <PrimaryColor key={pColor.className} className={pColor.className} />
           ))}
@@ -25,7 +24,6 @@ const Theme = () => {
       <div className="theme__background-wrapper">
         <h5>Couleur de fond</h5>
         <div className="theme__background-colors">
-          {" "}
           {backgroundColors.map((bColor) => (
             <BackgroundColor
               key={bColor.className}

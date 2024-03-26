@@ -26,3 +26,5 @@ export const themeReducer = (state, action) => {
     return { ...state, background: "bg-2" };
   }
 };
+
+export default themeReducer;
