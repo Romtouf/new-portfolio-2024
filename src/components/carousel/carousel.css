@@ -1,0 +1,102 @@
+.carousel {
+  perspective: 1000px;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  transform-style: preserve-3d;
+  animation: spin 10s infinite linear;
+}
+
+.carousel__face {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+  transform: rotateY(var(--rotate)) translateZ(300px);
+}
+
+.carousel__face img {
+  width: 100px;
+  height: auto;
+  .carousel {
+    perspective: 1000px;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    animation: spin 10s infinite linear;
+  }
+
+  .carousel__face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    transform: rotateY(var(--rotate)) translateZ(300px);
+  }
+
+  .carousel__face img {
+    width: 100px;
+    height: auto;
+    .carousel {
+      perspective: 1000px;
+      width: 200px;
+      height: 200px;
+      position: relative;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      animation: spin 10s infinite linear;
+    }
+
+    .carousel__face {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      color: white;
+      text-align: center;
+      font-size: 40px;
+      transform: rotateY(var(--rotate)) translateZ(300px);
+    }
+
+    .carousel__face img {
+      width: 100px;
+      height: auto;
+    }
+
+    @keyframes spin {
+      from {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(1turn);
+      }
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(1turn);
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(1turn);
+  }
+}

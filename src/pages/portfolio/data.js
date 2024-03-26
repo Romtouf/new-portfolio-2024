@@ -1,0 +1,58 @@
+const data = [
+  {
+    id: 1,
+    category: "JavaScript",
+    img: "assets/portfolio/portfolio1.jpg",
+    title: "Project 1",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 2,
+    category: "React js",
+    img: "assets/portfolio/portfolio1.jpg",
+    test: "Project 2",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 3,
+    category: "IA",
+    img: "assets/portfolio/portfolio1.jpg",
+    title: "Project 3",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 4,
+    category: "Redux",
+    img: "assets/portfolio/portfolio1.jpg",
+    title: "Project 4",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 5,
+    category: "Gestion de projet",
+    img: "assets/portfolio/portfolio1.jpg",
+    title: "Project 5",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+  {
+    id: 6,
+    category: "React js",
+    img: "assets/portfolio/portfolio1.jpg",
+    title: "Project 6",
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    link: "#",
+    github: "#",
+  },
+];
+
+export default data;

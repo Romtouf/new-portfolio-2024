@@ -4,7 +4,6 @@ import Header from "./pages/header/Header";
 import About from "./pages/about/About";
 import Services from "./pages/services/Services";
 import Portfolio from "./pages/portfolio/Portfolio";
-import Testimonials from "./pages/testimonials/Testimonials";
 import Edito from "./pages/edito/Edito";
 import Contact from "./pages/contact/Contact";
 import Footer from "./pages/footer/Footer";
@@ -18,7 +17,6 @@ function App() {
       <About />
       <Services />
       <Portfolio />
-      <Testimonials />
       <Edito />
       <Contact />
       <Footer />
