@@ -7,7 +7,7 @@ const Contact = () => {
     <section id="contact">
       <h2>Contactez-moi</h2>
       <p>Envoyez-moi un message par email grâce au lien ci-dessous.</p>
-      <div className="container contact__container">
+      <div className="container contact__container" data-aos="fade-up">
         {contacts.map((contact) => (
           <a
             key={contact.contactId}
