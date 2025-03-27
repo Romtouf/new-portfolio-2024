@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <p>
             Créer des projets est ma passion. Je suis entré dans le monde du
-            développement il y a plus d'un an maintenant.
+            développement il y a plus de trois ans maintenant.
           </p>
           <p>
             Je m'appelle Romain Girard. Je suis développeur front-end. J'ai

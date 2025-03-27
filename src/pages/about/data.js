@@ -3,7 +3,7 @@ import { TbBooks } from "react-icons/tb";
 import { BiHappyHeartEyes } from "react-icons/bi";
 
 const data = [
-  { aboutId: 1, icon: <FaAward />, title: "Experience", desc: "1+ année" },
+  { aboutId: 1, icon: <FaAward />, title: "Experience", desc: "2+ années" },
   { aboutId: 2, icon: <TbBooks />, title: "Projets", desc: "10+ complétés" },
   {
     aboutId: 3,
