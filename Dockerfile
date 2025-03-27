@@ -16,20 +16,18 @@ COPY . .
 RUN npm run build
 
 # Stage de production
-FROM node:18-alpine AS runner
+FROM node:18-alpine AS production
 
 WORKDIR /app
 
-ENV NODE_ENV production
+# Installation de serve - un serveur statique léger
+RUN npm install -g serve
 
-# Copie des fichiers nécessaires depuis le stage de build
-COPY --from=builder /app/next.config.js ./
-COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
+# Copier les fichiers de build depuis le stage builder
+COPY --from=builder /app/build ./build
 
 # Exposition du port
 EXPOSE 3000
 
-# Commande pour démarrer l'application
-CMD ["node", "server.js"] 
+# Démarrage du serveur
+CMD ["serve", "-s", "build", "-l", "3000"] 
