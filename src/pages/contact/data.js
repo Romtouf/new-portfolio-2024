@@ -4,7 +4,7 @@ const data = [
   {
     contactId: 4,
     icon: <MdAttachEmail />,
-    link: "mailto:romain.formationoc@gmail.com",
+    link: "mailto:admin@codebyr.dev",
   },
 ];
 

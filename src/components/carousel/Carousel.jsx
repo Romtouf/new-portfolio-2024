@@ -14,6 +14,7 @@ import logoAstro from "../../assets/astro-logo.svg";
 import logoTailwind from "../../assets/tailwind-logo.svg";
 import logoHTMX from "../../assets/htmx.png";
 import logoAlpine from "../../assets/alpinejs.png";
+import logoC from "../../assets/c-language-seeklogo.png";
 const logos = [
   `${logoGit}`,
   `${logoReact}`,
@@ -29,6 +30,7 @@ const logos = [
   `${logoFigma}`,
   `${logoPHP}`,
   `${logoMySQL}`,
+  `${logoC}`,
 ];
 
 const Carousel = () => {
