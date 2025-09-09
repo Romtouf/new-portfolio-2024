@@ -15,6 +15,10 @@ import logoTailwind from "../../assets/tailwind-logo.svg";
 import logoHTMX from "../../assets/htmx.png";
 import logoAlpine from "../../assets/alpinejs.png";
 import logoC from "../../assets/c-language-seeklogo.png";
+import logoNextjs from "../../assets/nextjs.svg";
+import logoPostgres from "../../assets/postgresql.svg";
+import logoTypeScript from "../../assets/typescript.webp";
+import logoPrisma from "../../assets/prisma.webp";
 const logos = [
   `${logoGit}`,
   `${logoReact}`,
@@ -31,6 +35,10 @@ const logos = [
   `${logoPHP}`,
   `${logoMySQL}`,
   `${logoC}`,
+  `${logoNextjs}`,
+  `${logoPostgres}`,
+  `${logoTypeScript}`,
+  `${logoPrisma}`,
 ];
 
 const Carousel = () => {

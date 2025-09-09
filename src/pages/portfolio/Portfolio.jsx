@@ -26,9 +26,9 @@ const Portfolio = () => {
     <section id="portfolio">
       <h2>Projets récents</h2>
       <p>
-        Je vous propose de prêter attention aux projets que j'ai pu réalisés
-        récemment. Utilisez le bouton pour basculer entre les différentes
-        catégories.
+        Découvrez une sélection de mes réalisations récentes, allant du développement web 
+        aux applications innovantes. Explorez les différentes catégories pour voir 
+        l'étendue de mes compétences techniques et créatives.
       </p>
       <div className="container portfolio__container">
         <ProjectsCategories

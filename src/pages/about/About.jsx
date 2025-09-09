@@ -27,14 +27,15 @@ const About = () => {
             ))}
           </div>
           <p>
-            Créer des projets est ma passion. Je suis entré dans le monde du
-            développement il y a plus de trois ans maintenant.
+            Passionné par l'innovation technologique, je me suis spécialisé dans le développement web 
+            et la formation depuis plus de trois ans. Mon parcours de reconversion m'a permis d'acquérir 
+            une expertise solide dans les technologies modernes.
           </p>
           <p>
-            Je m'appelle Romain Girard. Je suis développeur front-end. J'ai
-            choisi de me reconvertir dans ce domaine et obtenu le diplôme de
-            développeur web en novembre 2023. Je réalise des sites web en HTML,
-            CSS, JavaScript, React et Redux.
+            Développeur full-stack et formateur, je maîtrise un éventail complet de technologies : 
+            React, Next.js, Node.js, TypeScript, Prisma, PostgreSQL, Tailwind CSS, et bien d'autres. 
+            Mon approche allie performance technique et pédagogie, permettant de créer des solutions 
+            digitales robustes tout en transmettant mes connaissances.
           </p>
           <a href={CV} download className="btn primary">
             Télécharger le CV <IoMdDownload />

@@ -24,6 +24,9 @@
 
 .card.portfolio__project {
   animation: animateProject 800ms ease-in forwards;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 @keyframes animateProject {
@@ -48,11 +51,14 @@
 
 .portfolio__project p {
   margin: 0.5rem 0 2rem;
+  flex-grow: 1;
 }
 
 .portfolio__project-cta {
   display: flex;
   gap: 1rem;
+  margin-top: auto;
+  justify-content: center;
 }
 
 .portfolio__project:hover .btn.sm {

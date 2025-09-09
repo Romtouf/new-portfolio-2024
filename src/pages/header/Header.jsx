@@ -19,9 +19,9 @@ const Header = () => {
         </div>
         <h3 data-aos="fade-up">Romain Girard</h3>
         <p data-aos="fade-up">
-          Vous êtes à un clic de créer le site Web ou l’application Web de vos
-          rêves. Envoyez-moi dès aujourd'hui les détails de votre projet de site
-          Web moderne, adapté aux mobiles et hautement performant.
+          Développeur web passionné et formateur expérimenté, je transforme vos idées en solutions digitales innovantes. 
+          Spécialisé dans les technologies modernes, je vous accompagne dans la création de sites web performants 
+          et vous forme aux meilleures pratiques du développement web.
         </p>
         <div className="header__cta" data-aos="fade-up">
           <a href="#contact" className="btn primary">

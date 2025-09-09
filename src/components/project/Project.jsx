@@ -10,22 +10,26 @@ const Project = ({ project }) => {
       <h4>{project.title}</h4>
       <p>{project.desc}</p>
       <div className="portfolio__project-cta">
-        <a
-          href={project.link}
-          className="btn sm"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Site
-        </a>
-        <a
-          href={project.github}
-          className="btn sm primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Code source
-        </a>
+        {project.link && (
+          <a
+            href={project.link}
+            className="btn sm"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Site
+          </a>
+        )}
+        {project.github && (
+          <a
+            href={project.github}
+            className="btn sm primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Code source
+          </a>
+        )}
       </div>
     </Card>
   );
