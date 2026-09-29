@@ -4,7 +4,7 @@ import pbernard from "../../assets/pbernard.webp";
 import histoireMagique from "../../assets/histoire-magique.webp";
 import fossoyeurfc from "../../assets/fossoyeurfc.webp";
 import tonTournoi from "../../assets/ton-tournoi.webp";
-import cubFirst from "../../assets/cubFirst.webp";
+import codebyrOs from "../../assets/codebyr-os.webp";
 
 const data = [
   {
@@ -54,12 +54,12 @@ const data = [
   },
   {
     portId: 24,
-    category: "Framework",
-    img: cubFirst,
-    title: "cubFirst",
-    desc: "Création d'un micro framework HTML-first. Réalisé avec TypeScript.",
-    // link: "",
-    github: "https://github.com/Romtouf/cubFirst",
+    category: "Linux",
+    img: codebyrOs,
+    title: "Codebyr OS",
+    desc: "Distribution Linux basée sur Debian qui apporte la sécurité par compartimentation à tous : des Espaces isolés et colorés (Personnel, Travail, Banque, Navigation, Jetable), sans expertise technique. Réalisé avec Debian live-build, GNOME, bubblewrap et Python.",
+    link: "https://os.codebyr.dev",
+    github: "https://github.com/Romtouf/codebyr-os",
   },
 ];
 

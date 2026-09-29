@@ -28,7 +28,7 @@ const About = () => {
           </div>
           <p>
             Passionné par l'innovation technologique, je me suis spécialisé dans le développement web 
-            et la formation depuis plus de trois ans. Mon parcours de reconversion m'a permis d'acquérir 
+            et la formation depuis plus de quatre ans. Mon parcours de reconversion m'a permis d'acquérir 
             une expertise solide dans les technologies modernes.
           </p>
           <p>
