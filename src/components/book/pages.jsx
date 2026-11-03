@@ -55,7 +55,7 @@ const ProjectLinks = ({ project }) => (
         rel="noopener noreferrer"
         onClick={stop}
       >
-        Visiter le site <FiArrowUpRight aria-hidden="true" />
+        {project.linkLabel || "Visiter le site"} <FiArrowUpRight aria-hidden="true" />
       </a>
     )}
     {project.github && (
