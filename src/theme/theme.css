@@ -1,104 +1,160 @@
-.card.theme__modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #f3f3f3;
-  z-index: 200;
-  text-align: center;
-  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.2);
-  padding: 3rem;
-  opacity: 0;
-  animation: animateModal 500ms ease-in forwards;
-}
+/* The dialog box itself is styled in components/modal/modal.css */
 
-@keyframes animateModal {
-  to {
-    opacity: 1;
-  }
-}
-
-.card.theme__modal:hover {
-  background: #f3f3f3;
-}
-
-.card.theme__modal small {
+.theme__eyebrow {
   display: block;
-  margin-top: 0.6rem;
-  width: 80%;
-  margin-inline: auto;
+  margin-right: -0.42em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.66rem;
+  font-weight: 600;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-.theme__primary-wrapper {
-  margin: 3rem 0;
+.modal .theme__title {
+  margin: 0.6rem 0 0.8rem;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ink);
 }
+
+.theme__ornament {
+  width: 6rem;
+  margin: 0 auto;
+}
+
+.theme__intro {
+  max-width: 21rem;
+  margin: 1rem auto 0;
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+.theme__group {
+  margin-top: 2rem;
+}
+
+.modal .theme__label {
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+/* ---------- Ink colours: wax drops ---------- */
 
 .theme__primary-colors {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.4rem;
 }
 
-.theme__primary-colors button {
-  width: 2rem;
-  aspect-ratio: 1/1;
-  border-radius: 50%;
+.theme__swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
   cursor: pointer;
 }
 
-.theme__primary-colors .color-1 {
-  background: hsl(240, 100%, 20%);
+.theme__swatch-drop {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  border-radius: 47% 53% 51% 49% / 52% 46% 54% 48%;
+  background: radial-gradient(circle at 34% 30%, hsl(var(--hue), 48%, 44%), hsl(var(--hue), 50%, 30%) 48%,
+      hsl(var(--hue), 55%, 15%));
+  box-shadow: 0 0.2rem 0.45rem rgba(30, 10, 5, 0.35), inset 0 -0.15rem 0.3rem rgba(0, 0, 0, 0.35),
+    inset 0 0.1rem 0.2rem rgba(255, 255, 255, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.theme__primary-colors .color-2 {
-  background: hsl(110, 70%, 46%);
+.theme__swatch:hover .theme__swatch-drop {
+  transform: scale(1.08) rotate(-6deg);
 }
 
-.theme__primary-colors .color-3 {
-  background: hsl(210, 70%, 46%);
+.theme__swatch.is-selected .theme__swatch-drop {
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px var(--ink), 0 0.2rem 0.45rem rgba(30, 10, 5, 0.35);
 }
 
-.theme__primary-colors .color-4 {
-  background: hsl(325, 70%, 46%);
+.theme__swatch-name {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.85rem;
+  font-style: italic;
 }
 
-.theme__primary-colors .color-5 {
-  background: hsl(0, 70%, 46%);
+.theme__swatch.is-selected .theme__swatch-name {
+  color: var(--ink);
+  font-weight: 500;
 }
 
-.theme__primary-colors .color-6 {
-  background: hsl(52, 70%, 46%);
-}
+/* ---------- Page background ---------- */
 
 .theme__background-colors {
   display: flex;
-  gap: 2rem;
   justify-content: center;
-  margin-top: 1rem;
+  gap: 1rem;
 }
 
-.theme__background-colors button {
-  width: 7rem;
-  height: 2.5rem;
-  background: white;
-  border-radius: var(--border-radius-3);
+.theme__background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  color: var(--ink-soft);
+  font: inherit;
   cursor: pointer;
 }
 
-.theme__background-colors .bg-2 {
-  background: #111;
+.theme__background-preview {
+  width: 6.5rem;
+  height: 3rem;
+  border-radius: 3px;
+  border: 1px solid rgba(42, 37, 31, 0.25);
+  transition: box-shadow 0.25s ease;
 }
 
-/* Media queries phones */
+.theme__background.bg-1 .theme__background-preview {
+  background: linear-gradient(135deg, hsl(40, 40%, 98.5%) 50%, hsl(38, 24%, 94.5%) 50%);
+}
+
+.theme__background.bg-2 .theme__background-preview {
+  background: linear-gradient(135deg, hsl(30, 8%, 6.5%) 50%, hsl(30, 7%, 10%) 50%);
+}
+
+.theme__background.is-selected .theme__background-preview {
+  box-shadow: 0 0 0 3px var(--paper), 0 0 0 4px var(--ink);
+}
+
+.theme__background-name {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.theme__background.is-selected .theme__background-name {
+  color: var(--ink);
+  font-weight: 500;
+}
+
 @media screen and (max-width: 600px) {
-  .card.theme__modal {
-    width: var(--container-width-md);
-    padding: 3rem 1.5rem;
+  .modal {
+    padding: 2.6rem 1.4rem 2.2rem;
   }
 
   .theme__primary-colors {
-    gap: 0.6rem;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0.8rem;
   }
 }

@@ -1,23 +1,17 @@
 import React from "react";
 import "../contact/contact.css";
-import contacts from "./data";
+import contact from "./data";
+import Envelope from "../../components/envelope/Envelope";
+import SectionTitle from "../../components/section-title/SectionTitle";
 
 const Contact = () => {
   return (
     <section id="contact">
-      <h2>Contactez-moi</h2>
-      <p>Envoyez-moi un message par email grâce au lien ci-dessous.</p>
+      <SectionTitle part="IV" title="Contactez-moi">
+        Une idée, un projet, une question ? Ouvrez l'enveloppe et écrivez-moi.
+      </SectionTitle>
       <div className="container contact__container" data-aos="fade-up">
-        {contacts.map((contact) => (
-          <a
-            key={contact.contactId}
-            href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {contact.icon}
-          </a>
-        ))}
+        <Envelope email={contact.email} subject={contact.subject} />
       </div>
     </section>
   );

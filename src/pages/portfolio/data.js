@@ -48,7 +48,7 @@ const data = [
     category: "Next JS",
     img: tonTournoi,
     title: "Ton tournoi",
-    desc: "Application de création de tournoi. Alogrithmique de tournois complexes. Site réalisé avec Next JS, Tailwind CSS, Prisma, PostgreSQL.",
+    desc: "Application de création de tournoi. Algorithmique de tournois complexes. Site réalisé avec Next JS, Tailwind CSS, Prisma, PostgreSQL.",
     link: "https://ton-tournoi.codebyr.dev",
     // github: "",
   },

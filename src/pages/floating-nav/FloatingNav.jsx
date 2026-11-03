@@ -1,31 +1,36 @@
 import React from "react";
 import "../floating-nav/floatingNav.css";
 import data from "../../menu/data";
-import Scrollspy from "react-scrollspy";
-import Nav from "./Nav";
+import useActiveSection from "../../hooks/useActiveSection";
 
+const sectionIds = data.map((item) => item.link);
+
+// Tablets and phones only (see CSS). Hidden on the title page, where it
+// would cover the buttons.
 const FloatingNav = () => {
-  const items = ["header"];
-
-  data.forEach(({ link }) => {
-    if (!link) return;
-
-    items.push(link);
-  });
+  const active = useActiveSection(sectionIds);
 
   return (
-    <ul id="floating__nav">
-      <Scrollspy
-        offset={-500}
-        className="scrollspy"
-        items={items}
-        currentClassName="active"
-      >
+    <nav
+      id="floating__nav"
+      className={active === sectionIds[0] ? "is-hidden" : undefined}
+      aria-label="Navigation rapide"
+    >
+      <ul>
         {data.map((item) => (
-          <Nav key={item.floatId} item={item} />
+          <li key={item.link}>
+            <a
+              href={`#${item.link}`}
+              className={active === item.link ? "is-active" : undefined}
+              aria-current={active === item.link ? "location" : undefined}
+              aria-label={item.title}
+            >
+              {item.icon}
+            </a>
+          </li>
         ))}
-      </Scrollspy>
-    </ul>
+      </ul>
+    </nav>
   );
 };
 

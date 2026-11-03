@@ -1,11 +1,6 @@
-import { MdAttachEmail } from "react-icons/md";
+const contact = {
+  email: "romain.formationoc@gmail.com",
+  subject: "Prise de contact depuis votre portfolio",
+};
 
-const data = [
-  {
-    contactId: 4,
-    icon: <MdAttachEmail />,
-    link: "mailto:admin@codebyr.dev",
-  },
-];
-
-export default data;
+export default contact;

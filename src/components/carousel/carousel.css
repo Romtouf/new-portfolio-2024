@@ -1,27 +1,130 @@
+/* Perspective sits on a parent that doesn't spin, so depth stays true */
+.carousel__stage {
+  --spin: 16s;
+  --tilt: 22deg;
+  --radius: 370px;
+  --rail: 46px; /* gold orbit, just under the labels */
+  perspective: 1200px;
+  /* The tilted ring is drawn outside its 200px box: room above and below */
+  padding: 3rem 0 10rem;
+}
+
+/* Ring seen slightly from above: labels at the back sit higher */
+.carousel__tilt {
+  position: relative;
+  transform: rotateX(calc(var(--tilt) * -1));
+  transform-style: preserve-3d;
+}
+
 .carousel {
-  perspective: 1000px;
   width: 200px;
   height: 200px;
   position: relative;
   margin: 0 auto;
   transform-style: preserve-3d;
-  animation: spin 10s infinite linear;
+  animation: spin var(--spin) infinite linear;
 }
+
+/* ---------- Gold orbit and its shadow, lying in the ring's plane ---------- */
+
+.carousel__orbit,
+.carousel__shadow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.carousel__orbit {
+  width: calc(var(--radius) * 2);
+  height: calc(var(--radius) * 2);
+  margin: calc(var(--radius) * -1) 0 0 calc(var(--radius) * -1);
+  border: 1px solid rgba(201, 164, 87, 0.75);
+  outline: 1px solid rgba(201, 164, 87, 0.3);
+  outline-offset: 9px;
+  transform: translateY(var(--rail)) rotateX(90deg);
+}
+
+.carousel__shadow {
+  width: calc(var(--radius) * 2 + 160px);
+  height: calc(var(--radius) * 2 + 160px);
+  margin: calc(var(--radius) * -1 - 80px) 0 0 calc(var(--radius) * -1 - 80px);
+  background: radial-gradient(closest-side, rgba(40, 25, 10, 0.1), rgba(40, 25, 10, 0.035) 70%, transparent);
+  transform: translateY(calc(var(--rail) + 24px)) rotateX(90deg);
+}
+
+/* ---------- Labels ---------- */
 
 .carousel__face {
   position: absolute;
   width: 200px;
   height: 200px;
-  line-height: 200px;
-  color: white;
-  text-align: center;
-  font-size: 40px;
-  transform: rotateY(var(--rotate)) translateZ(300px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(var(--rotate)) translateZ(var(--radius));
+  transform-style: preserve-3d;
 }
 
-.carousel__face img {
-  width: 100px;
-  height: auto;
+/* Turns against the ring so each label always faces the visitor */
+.carousel__card {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 104px;
+  height: 76px;
+  border: 1px solid rgba(201, 164, 87, 0.8);
+  border-radius: 4px;
+  background-color: var(--paper);
+  background-image: var(--grain),
+    radial-gradient(120% 90% at 50% 30%, rgba(255, 253, 246, 0.85), transparent 65%);
+  box-shadow: 0 8px 16px -8px rgba(40, 25, 10, 0.45);
+  animation: face-front var(--spin) infinite linear;
+}
+
+/* Inner hairline */
+.carousel__card::before {
+  content: "";
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(201, 164, 87, 0.35);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+/* Pause to read */
+.carousel__stage:hover .carousel,
+.carousel__stage:hover .carousel__card {
+  animation-play-state: paused;
+}
+
+/* Box sized in Carousel.jsx so every logo looks about the same size */
+.carousel__logo {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.carousel__logo.is-ready {
+  opacity: 1;
+}
+
+.carousel__logo img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+}
+
+.carousel__logo.is-ready img {
+  object-fit: fill;
 }
 
 @keyframes spin {
@@ -30,5 +133,35 @@
   }
   to {
     transform: rotateY(1turn);
+  }
+}
+
+@keyframes face-front {
+  from {
+    transform: rotateY(calc(var(--rotate) * -1)) rotateX(var(--tilt));
+  }
+  to {
+    transform: rotateY(calc(var(--rotate) * -1 - 1turn)) rotateX(var(--tilt));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel,
+  .carousel__card {
+    animation-play-state: paused;
+  }
+}
+
+/* Smaller screens: same ring, scaled down to fit (zoom also shrinks the space it takes) */
+@media screen and (max-width: 900px) {
+  .carousel__stage {
+    zoom: 0.78;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .carousel__stage {
+    --radius: 300px;
+    zoom: 0.48;
   }
 }

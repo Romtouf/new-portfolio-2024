@@ -1,14 +1,15 @@
-import { RiLinkedinFill } from "react-icons/ri";
-import { AiOutlineGithub } from "react-icons/ai";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 const data = [
   {
+    label: "LinkedIn",
     link: "https://www.linkedin.com/in/rom22-devweb",
-    icon: <RiLinkedinFill />,
+    icon: <FiLinkedin />,
   },
   {
+    label: "GitHub",
     link: "https://github.com/Romtouf",
-    icon: <AiOutlineGithub />,
+    icon: <FiGithub />,
   },
 ];
 

@@ -1,16 +1,17 @@
-import { FaAward } from "react-icons/fa";
-import { TbBooks } from "react-icons/tb";
-import { BiHappyHeartEyes } from "react-icons/bi";
-
-const data = [
-  { aboutId: 1, icon: <FaAward />, title: "Experience", desc: "4+ années" },
-  { aboutId: 2, icon: <TbBooks />, title: "Projets", desc: "10+ complétés" },
-  {
-    aboutId: 3,
-    icon: <BiHappyHeartEyes />,
-    title: "Clients",
-    desc: "12+ clients",
-  },
+// Key figures, printed as ink stamps on the "about" sheet
+export const stats = [
+  { value: "4+", label: ["années", "d'expérience"] },
+  { value: "10+", label: ["projets", "complétés"] },
+  { value: "12+", label: ["clients"] },
 ];
 
-export default data;
+// Listed on the index card inside the folder
+export const tools = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "TypeScript",
+  "Prisma",
+  "PostgreSQL",
+  "Tailwind CSS",
+];

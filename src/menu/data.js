@@ -1,35 +1,12 @@
-import { AiFillHome } from "react-icons/ai";
-import { BsPersonFill } from "react-icons/bs";
-import { MdHomeRepairService } from "react-icons/md";
-import { AiFillAppstore } from "react-icons/ai";
-import { AiFillMessage } from "react-icons/ai";
+import { FiBookOpen, FiFeather, FiHome, FiLayers, FiUser } from "react-icons/fi";
 
+// "link" is the id of the section
 const data = [
-  {
-    link: "",
-    title: "Accueil",
-    icon: <AiFillHome />,
-  },
-  {
-    link: "about",
-    title: "À propos de moi",
-    icon: <BsPersonFill />,
-  },
-  {
-    link: "services",
-    title: "Services",
-    icon: <MdHomeRepairService />,
-  },
-  {
-    link: "portfolio",
-    title: "Portfolio",
-    icon: <AiFillAppstore />,
-  },
-  {
-    link: "contact",
-    title: "Contact",
-    icon: <AiFillMessage />,
-  },
+  { link: "header", title: "Accueil", icon: <FiHome /> },
+  { link: "about", title: "À propos de moi", icon: <FiUser /> },
+  { link: "competences", title: "Compétences", icon: <FiLayers /> },
+  { link: "portfolio", title: "Portfolio", icon: <FiBookOpen /> },
+  { link: "contact", title: "Contact", icon: <FiFeather /> },
 ];
 
 export default data;

@@ -1,60 +1,53 @@
 #floating__nav {
   display: none;
-  animation: animateFloatingNav 300ms ease forwards;
 }
 
-@keyframes animateFloatingNav {
-  from {
-    opacity: 0;
-
-    bottom: -5rem;
-  }
-
-  to {
-    opacity: 1;
-
-    bottom: 3rem;
-  }
-}
-
-/* Media queries tablets and phones */
+/* Tablets and phones */
 @media (max-width: 1024px) {
   #floating__nav {
-    display: flex;
+    display: block;
     position: fixed;
-    align-items: center;
-    bottom: 3rem;
     left: 50%;
-    transform: translateX(-50%);
+    bottom: 1.4rem;
     z-index: 9;
+    transform: translateX(-50%);
+    transition: transform 0.45s cubic-bezier(0.3, 0.7, 0.4, 1), opacity 0.3s ease;
+  }
+
+  #floating__nav.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 160%);
   }
 
   #floating__nav ul {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 60px;
-  }
-
-  .scrollspy {
-    display: flex;
-    gap: 1rem;
-    background: rgba(0, 0, 0, 0.4);
-    padding: 0.8rem 1.5rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(20px);
+    gap: 0.25rem;
+    padding: 0.35rem;
+    border: 1px solid color-mix(in srgb, var(--color-black) 12%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--color-white) 88%, transparent);
+    -webkit-backdrop-filter: blur(14px);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 0.8rem 2rem -0.8rem rgba(30, 20, 10, 0.45);
   }
 
   #floating__nav a {
-    padding: 0.6rem;
-    border-radius: 50%;
-    font-size: 1.3rem;
-    color: white;
     display: grid;
+    place-items: center;
+    width: 2.8rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    font-size: 1.15rem;
+    color: var(--color-black);
   }
 
-  #floating__nav li.active a {
-    background: var(--color-primary);
+  /* Current section: a small wax seal */
+  #floating__nav a.is-active {
+    background: radial-gradient(circle at 34% 30%, hsl(var(--primary-hue), 48%, 44%),
+        hsl(var(--primary-hue), 50%, 30%) 48%, hsl(var(--primary-hue), 55%, 15%));
+    box-shadow: 0 0.15rem 0.4rem rgba(30, 10, 5, 0.35),
+      inset 0 0.1rem 0.2rem rgba(255, 255, 255, 0.2);
+    color: #f7f2e7;
   }
 }
